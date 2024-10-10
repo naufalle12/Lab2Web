@@ -1,0 +1,169 @@
+# penjelasan html 
+1. Deklarasi Dokumen HTML
+html
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>: Deklarasi bahwa dokumen ini adalah HTML5.
+<html lang="en">: Tag pembuka untuk elemen HTML dengan atribut lang="en" yang mengindikasikan bahwa bahasa dokumen adalah bahasa Inggris.
+2. Elemen <head>
+html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Dasar</title>
+    <link rel="stylesheet" href="styl_external.css" type="text/css">
+    <style>
+        body {
+            font-family: 'Open Sans' , sans-serif;    
+        }
+        header {
+            min-height: 80px;
+            border-bottom: 1px solid #77ccef;
+        }
+        h1 {
+            font-size: 24px;
+            color: #0f189f;
+            text-align: center;
+            padding: 20px 10px;
+        }
+        h1 i{
+            color:#6d6a6b;
+        }
+        p {
+            text-align: center;
+            color: #ccd8e4;
+        }       
+    </style>
+</head>
+<meta charset="UTF-8">: Mengatur karakter encoding dokumen menjadi UTF-8 (untuk mendukung berbagai karakter).
+<meta name="viewport" content="width=device-width, initial-scale=1.0">: Mengoptimalkan tampilan di perangkat seluler dengan mengatur lebar viewport sesuai dengan lebar perangkat.
+<title>CSS Dasar</title>: Judul halaman yang akan ditampilkan di tab browser.
+<link rel="stylesheet" href="styl_external.css" type="text/css">: Menghubungkan file CSS eksternal yang disebut styl_external.css untuk menambahkan gaya tambahan.
+<style>: Memuat CSS internal yang langsung ditulis dalam dokumen HTML.
+CSS di dalam elemen <style> mengatur beberapa elemen:
+body: Menggunakan font 'Open Sans' atau sans-serif jika 'Open Sans' tidak tersedia.
+header: Mengatur tinggi minimal (80px) dan menambahkan garis bawah dengan warna (#77ccef).
+h1: Mengatur ukuran font menjadi 24px, warna teks (#0f189f), dan perataan teks ke tengah.
+h1 i: Mengatur warna untuk elemen i di dalam tag <h1>.
+p: Mengatur teks paragraf agar rata tengah dan memiliki warna (#ccd8e4).
+3. Elemen <body>
+html
+<body>
+    <header>
+        <h1> CSS Internal dan <i> Inline CSS</i></h1>
+    </header>
+    <nav>
+        <a href="lab2_css_dasar.html">CSS Dasar</a>
+        <a href="lab2_css_external.html">CSS External</a>
+        <a href="lab1_tag_dasar.html">HTML Dasar</a>
+    </nav>
+    <div id="intro">
+        <h1>Hello World</h1>
+        <p>Kami Sedang belajar HTML dan CSS dasar, pada mata kuliah <b>Pemograman Web</b> di <i>Universitas Pelita Bangsa</i>. Pelajaran pertama yang kami dapat adalah membuat tampilan web sederhana dalam rangka mengenal tag-tag dasar HTML dan CSS. </p>
+        <a class="button btn-primary" href="#intro"> Informasi selengkapnya</a>
+    </div>
+</body>
+<header>: Menampilkan heading yang menampilkan judul halaman, dengan teks "CSS Internal dan Inline CSS". Bagian "Inline CSS" menggunakan elemen <i> untuk membuat teks miring
+<nav>: Menu navigasi dengan tiga link yang mengarahkan pengguna ke halaman lain seperti CSS Dasar, CSS External, dan HTML Dasar.
+<div id="intro">: Sebuah container dengan ID intro yang memuat:
+<h1>Hello World</h1>: Judul "Hello World".
+<p>: Paragraf yang menjelaskan bahwa pengguna sedang belajar HTML dan CSS di mata kuliah Pemrograman Web di Universitas Pelita Bangsa.
+<a class="button btn-primary" href="#intro">Informasi selengkapnya</a>: Sebuah link dengan class button btn-primary yang ketika diklik, akan menggulir halaman ke bagian dengan ID intro.
+Gaya CSS Eksternal dan Internal
+Kode menggunakan CSS eksternal dari file styl_external.css yang belum ditampilkan di sini.
+CSS internal ditulis langsung di dalam dokumen untuk mengatur elemen-elemen dasar seperti body, header, dan p.
+Secara keseluruhan, HTML ini menampilkan struktur halaman web sederhana dengan navigasi dasar, gaya tipografi, dan tautan yang mengarahkan ke halaman lain serta ke bagian tertentu dalam halaman yang sama.
+
+# penjelasan css
+1. ID Selector: #intro
+css
+Copy code
+#intro {
+    background: #418fb1;
+    border: 1px solid #099294;
+    min-height: 100px;
+    padding: 10px;
+}
+#intro h1 {
+    text-align: left;
+    border: 0;
+    color: #fff;
+}
+#intro: Selector yang menargetkan elemen HTML dengan id="intro". Ini adalah ID selector karena menggunakan tanda # dan unik untuk satu elemen dalam halaman.
+
+background: #418fb1: Menetapkan latar belakang elemen dengan warna biru (#418fb1).
+border: 1px solid #099294: Menambahkan garis batas (border) setebal 1px dengan warna biru kehijauan (#099294).
+min-height: 100px: Mengatur tinggi minimal elemen menjadi 100 piksel.
+padding: 10px: Memberi ruang dalam elemen sebesar 10 piksel dari batas elemen.
+#intro h1: Menargetkan tag <h1> yang berada di dalam elemen dengan ID intro.
+
+text-align: left: Teks di dalam <h1> akan diratakan ke kiri.
+border: 0: Menghilangkan border (tidak ada batas).
+color: #fff: Mengatur warna teks menjadi putih.
+2. Class Selector: .button
+css
+.button {
+    padding: 15px 20px;
+    background: #bebcbd;
+    color: #fff;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+}
+.button: Selector yang menargetkan elemen-elemen dengan class button. Ini adalah class selector yang diawali dengan tanda titik ..
+padding: 15px 20px: Memberi ruang dalam elemen (padding) 15 piksel vertikal (atas/bawah) dan 20 piksel horizontal (kiri/kanan).
+background: #bebcbd: Mengatur latar belakang dengan warna abu-abu muda (#bebcbd).
+color: #fff: Mengatur warna teks menjadi putih.
+display: inline-block: Mengatur elemen untuk tampil sebagai blok sebaris. Ini membuat elemen tetap sejajar dengan elemen lain tetapi berperilaku seperti blok (dapat diatur tinggi dan lebarnya).
+margin: 10px: Memberi jarak luar (margin) sebesar 10 piksel dari elemen-elemen lainnya.
+text-decoration: none: Menghilangkan garis bawah pada teks di dalam elemen yang biasanya muncul pada elemen <a> (link).
+3. Class Selector: .btn-primary
+css
+.btn-primary {
+    background: #e42a42;
+}
+.btn-primary: Selector yang menargetkan elemen dengan class btn-primary. Selector ini sering digunakan untuk mendefinisikan tampilan tombol utama (primary button).
+background: #e42a42: Mengatur warna latar belakang menjadi merah (#e42a42).
+4. Elemen <nav> dan Gaya Tertentu
+css
+nav {
+    background: #20a759;
+    color: #fff;
+    padding: 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+nav: Selector ini menargetkan elemen <nav>.
+background: #20a759: Mengatur warna latar belakang dari elemen navigasi dengan warna hijau (#20a759).
+color: #fff: Mengatur warna teks di dalam elemen <nav> menjadi putih.
+padding: 10px: Menambahkan ruang di dalam elemen (padding) sebesar 10 piksel.
+nav a: Selector ini menargetkan semua elemen <a> (link) di dalam elemen <nav>.
+color: #fff: Mengatur warna teks link menjadi putih.
+text-decoration: none: Menghilangkan garis bawah dari teks link.
+padding: 10px 20px: Menambahkan ruang dalam elemen link sebesar 10 piksel vertikal dan 20 piksel horizontal.
+5. Hover Effect dan Aktif pada Elemen <nav>
+css
+nav a:hover {
+    background: #0b6b3a;
+}
+nav a:hover: Menargetkan elemen <a> di dalam <nav> ketika pengguna mengarahkan kursor (hover) di atas link.
+background: #0b6b3a: Saat pengguna hover, latar belakang link berubah menjadi hijau gelap (#0b6b3a).
+6. Kesalahan Penulisan
+css
+nav .active
+Bagian ini tampak tidak lengkap karena tidak memiliki deklarasi gaya apa pun atau kurung kurawal {}. Seharusnya mungkin menjadi sesuatu seperti:
+css
+nav .active {
+    background: #xxxxxx; /* warna background atau gaya tertentu */
+}
+Class active sering digunakan untuk menandai link yang sedang aktif dalam sebuah navigasi.
+Kesimpulan
+ID selector digunakan untuk mengatur elemen dengan ID tertentu, yang unik dalam dokumen.
+Class selector digunakan untuk mengatur banyak elemen yang memiliki class yang sama.
+Kode CSS ini mengatur tampilan elemen navigasi, tombol, teks, serta mengaplikasikan efek hover untuk interaksi visual.
+
+# penjelasan validator dok css
+tidak ada error dan aman
