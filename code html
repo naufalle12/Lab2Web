@@ -7,6 +7,12 @@
     <!-- menyisipkan css external-->
     <link rel="stylesheet" href="styl_external.css" type="text/css">
     <style>
+        #paragraf-1 {
+            color: white;
+        }
+        .text-paragraf {
+            color: blue;
+        }
         body {
             font-family: 'Open Sans' , sans-serif;    
         }
@@ -42,7 +48,8 @@
     <div id="intro">
         <h1>Hello World</h1>
         <p>Kami Sedang belajar HTML dan CSS dasar, pada mata kuliah <b>Pemograman Web</b> di <i>Universitas Pelita Bangsa</i>. Pelajaran pertama yang kami dapat adalah membuat tampilan web sederhana dalam rangka mengenal tag-tag dasar HTML dan CSS. </p>
-    <!--css class selector-->
+        <p id="paragraf-1" class="text-paragraf">Universitas Pelita Bangsa</p>
+        <!--css class selector-->
     <a class="button btn-primary" href="#intro"> Informasi selengkapnya</a>
     </div>
 </body>
