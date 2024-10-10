@@ -33,6 +33,13 @@ nav a {
     text-decoration: none;
     padding : 10px 20px;
 }
+h1 {
+    color: blue; 
+    font-size: 40px; 
+    margin: 20px;
+    padding: 10px; 
+    border: 2px solid blue; 
+}
 nav .active
 nav a:hover {
     background: #0b6b3a;
