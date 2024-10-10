@@ -73,11 +73,27 @@ Gaya CSS Eksternal dan Internal
 Kode menggunakan CSS eksternal dari file styl_external.css yang belum ditampilkan di sini.
 CSS internal ditulis langsung di dalam dokumen untuk mengatur elemen-elemen dasar seperti body, header, dan p.
 Secara keseluruhan, HTML ini menampilkan struktur halaman web sederhana dengan navigasi dasar, gaya tipografi, dan tautan yang mengarahkan ke halaman lain serta ke bagian tertentu dalam halaman yang sama.
-
-# penjelasan css
+Div dengan ID intro
+html
+<div id="intro">
+    <h1>Hello World</h1>
+    <p>Kami Sedang belajar HTML dan CSS dasar, pada mata kuliah <b>Pemograman Web</b> di <i>Universitas Pelita Bangsa</i>. Pelajaran pertama yang kami dapat adalah membuat tampilan web sederhana dalam rangka mengenal tag-tag dasar HTML dan CSS. </p>
+    <p id="paragraf-1" class="text-paragraf">Universitas Pelita Bangsa</p>
+    <a class="button btn-primary" href="#intro"> Informasi selengkapnya</a>
+</div>
+<div id="intro">: Membuat elemen div dengan ID intro. Elemen ini memiliki elemen-elemen anak.
+<h1>Hello World</h1>: Teks judul "Hello World".
+<p>: Paragraf pertama menjelaskan tujuan pembelajaran HTML dan CSS di Universitas Pelita Bangsa, menggunakan tag <b> untuk menebalkan teks dan <i> untuk memiringkan teks.
+<p id="paragraf-1" class="text-paragraf">Universitas Pelita Bangsa</p>: Paragraf kedua diberi ID paragraf-1 dan kelas text-paragraf, yang mengatur gaya dari CSS internal.
+<a class="button btn-primary" href="#intro"> Informasi selengkapnya</a>: Sebuah tombol (tautan) dengan kelas button dan btn-primary, yang mengarahkan pengguna ke bagian #intro.
+Kesimpulan
+CSS Eksternal: Di-link melalui file eksternal styl_external.css.
+CSS Internal: Dideklarasikan dalam tag <style> di bagian <head>.
+Navigasi: Dibuat menggunakan tag <nav>, menyediakan tautan ke berbagai halaman.
+ID dan Class Selectors: Digunakan untuk mengatur gaya pada elemen spesifik dan grup elemen sesuai dengan ID atau kelas yang diterap
+## penjelasan css
 1. ID Selector: #intro
 css
-Copy code
 #intro {
     background: #418fb1;
     border: 1px solid #099294;
@@ -90,13 +106,11 @@ Copy code
     color: #fff;
 }
 #intro: Selector yang menargetkan elemen HTML dengan id="intro". Ini adalah ID selector karena menggunakan tanda # dan unik untuk satu elemen dalam halaman.
-
 background: #418fb1: Menetapkan latar belakang elemen dengan warna biru (#418fb1).
 border: 1px solid #099294: Menambahkan garis batas (border) setebal 1px dengan warna biru kehijauan (#099294).
 min-height: 100px: Mengatur tinggi minimal elemen menjadi 100 piksel.
 padding: 10px: Memberi ruang dalam elemen sebesar 10 piksel dari batas elemen.
 #intro h1: Menargetkan tag <h1> yang berada di dalam elemen dengan ID intro.
-
 text-align: left: Teks di dalam <h1> akan diratakan ke kiri.
 border: 0: Menghilangkan border (tidak ada batas).
 color: #fff: Mengatur warna teks menjadi putih.
@@ -164,6 +178,19 @@ Kesimpulan
 ID selector digunakan untuk mengatur elemen dengan ID tertentu, yang unik dalam dokumen.
 Class selector digunakan untuk mengatur banyak elemen yang memiliki class yang sama.
 Kode CSS ini mengatur tampilan elemen navigasi, tombol, teks, serta mengaplikasikan efek hover untuk interaksi visual.
+Kode CSS di atas terdiri dari beberapa selektor yang mengatur tampilan elemen-elemen HTML. Berikut penjelasan ringkasnya:
+ID Selector #intro:
+Mengubah latar belakang, memberi batas, tinggi minimum, dan padding untuk elemen dengan ID intro.
+#intro h1 memformat elemen <h1> di dalam elemen dengan ID intro, mengatur teks kiri dan memberi warna putih.
+Class Selector .button:
+Kelas .button mengatur padding, latar belakang, warna teks, margin, dan menghilangkan dekorasi teks untuk tombol-tombol yang menggunakan kelas ini.
+Kelas .btn-primary mengubah latar belakang menjadi merah untuk tombol utama.
+nav:
+Mengatur gaya untuk elemen navigasi (nav), memberi latar belakang hijau, warna putih, dan padding.
+nav a mengatur gaya untuk tautan di dalam elemen navigasi, dengan warna putih dan tanpa dekorasi.
+nav a:hover menambahkan efek hover untuk mengubah latar belakang saat tautan disentuh.
+Global h1:
+Mengubah gaya seluruh elemen <h1> pada halaman, memberi warna teks biru, ukuran font besar, margin, padding, dan batas berwarna biru.
 
 # penjelasan validator dok css
 tidak ada error dan aman
